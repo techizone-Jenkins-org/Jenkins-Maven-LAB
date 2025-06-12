@@ -4,11 +4,7 @@
 ```
 Refer Install_Browser.md or Execute the 'installBrowser.sh' Shell script
 ```
-##  Pass the "Regression_Suite.xml" Test as Parameter to Maven command
-```
-mvn clean package
-```
-##  Pass the "Sanity_Suite.xml" Test as Parameter to Maven command
+##  Pass different "Browser" and "test.xml" file as Parameter to Maven command
 ```
 mvn clean package
 ```
