@@ -13,6 +13,7 @@ sudo alternatives --install /usr/bin/java java usr/lib/jvm/java-[VERSION]-openjd
 sudo alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-[VERSION]-openjdk/bin/javac 1000
 /usr/sbin/alternatives --config java
 ``` 
+HERE replace VERSIOn with java-version-number
 
 ####  Installation of MAven
 ```
