@@ -1,10 +1,15 @@
-# Pass Parameters to the Maven Command
+### Clone the Repo
+```
+git clone https://github.com/techizone-Jenkins-org/Jenkins-Maven-LAB.git
+cd Jenkins-Maven-LAB/02.PassParametersRunTimeViaMVN
+```
 
-## Prerequisites to run these Project is Install Browsers {chrome, Firefox, Edge}
-```
-Refer Install_Browser.md or Execute the 'installBrowser.sh' Shell script
-```
-##  Pass different "Browser" and "test.xml" file as Parameter to Maven command
+### Execute mvn command without Parameters
 ```
 mvn clean package
+```
+
+## Passing parameters to mvn command
+```
+mvn clean package -Dusername="USER1" -Dpassword="pwd1"
 ```

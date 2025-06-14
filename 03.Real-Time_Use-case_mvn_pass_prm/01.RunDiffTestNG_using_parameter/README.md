@@ -1,9 +1,15 @@
-# Pass Parameters to the Maven Command
+### Clone the Repo
+```
+git clone https://github.com/techizone-Jenkins-org/Jenkins-Maven-LAB.git
+cd Jenkins-Maven-LAB/02.PassParametersRunTimeViaMVN
+```
 
-##  Pass the "TestSuits.xml" Test as Parameter to Maven command
-We have 2 types of Test suits HERE "Regression_Suite.xml" & "Sanity_Suite.xml"
-So we need to pass any of these suit.xml file as Parameter to our mvn command
+### Execute mvn command without Parameters
 ```
 mvn clean package
 ```
 
+## Passing parameters to mvn command
+```
+mvn clean package -Dusername="USER1" -Dpassword="pwd1"
+```
