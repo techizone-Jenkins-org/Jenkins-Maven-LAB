@@ -1,0 +1,23 @@
+pipeline {
+    agent any // Or a specific agent like 'agent { label 'your-node-label' }'
+
+    parameters {
+        choice(name: 'AUTOMATION_SUITE', choices: ['RegressionSuite', 'SanitySuite', 'SmokeSuite'], description: 'Select the Automation Suite XML file')
+        choice(name: 'BROWSER', choices: ['Chrome', 'Firefox', 'Edge'], description: 'Select the browser for test execution')
+        // You could also use a string parameter for BROWSER if you want more free-form input:
+        // string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser for test execution (e.g., chrome, firefox, edge)')
+    }
+
+    stages {
+        stage('Build and Package with Dynamic Suite and Browser') {
+            steps {
+                // Ensure you are in the correct directory where your pom.xml is located
+                // If your Jenkins workspace is already the project root, this is fine.
+                // Otherwise, you might need a 'dir' step.
+
+                // Using double quotes for Groovy string interpolation and escaping inner quotes
+                sh "mvn clean package -DsuiteFile=\"${params.AUTOMATION_SUITE}.xml\" -DbrowserProperty=\"${params.BROWSER}\""
+            }
+        }
+    }
+}
