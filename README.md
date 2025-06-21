@@ -8,12 +8,12 @@ https://maven.apache.org/install.html
 ```
 ####  Installation of openJDK
 ```
-yum install java-[VERSION]-openjdk-devel
-sudo alternatives --install /usr/bin/java java usr/lib/jvm/java-[VERSION]-openjdk/bin/java 1000
-sudo alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-[VERSION]-openjdk/bin/javac 1000
+yum install java-11-openjdk-devel
+sudo alternatives --install /usr/bin/java java usr/lib/jvm/java-11-openjdk/bin/java 1000
+sudo alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-11-openjdk/bin/javac 1000
 /usr/sbin/alternatives --config java
 ``` 
-HERE replace VERSIOn with java-version-number
+HERE replace VERSION with java-version-number
 
 ####  Installation of MAven
 ```
