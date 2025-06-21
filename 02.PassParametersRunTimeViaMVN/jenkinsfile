@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'AUTOMATION_SUITE', defaultValue: 'RegressionSuite', description: 'Name of the Automation Suite XML file (e.g., RegressionSuite, SanitySuite)')
+        // Or if you have a predefined list of suites:
+        // choice(name: 'AUTOMATION_SUITE', choices: ['RegressionSuite', 'SanitySuite', 'SmokeSuite'], description: 'Select the Automation Suite XML file')
+    }
+
+    stages {
+        stage('Build and Package') {
+            steps {
+                // Ensure you are in the correct directory where your pom.xml is located
+                // If your Jenkins workspace is already the project root, this is fine.
+                // Otherwise, you might need a 'dir' step.
+                sh "mvn clean package -DsuiteFile=\"${params.AUTOMATION_SUITE}.xml\""
+            }
+        }
+    }
+}
