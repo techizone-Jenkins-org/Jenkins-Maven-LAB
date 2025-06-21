@@ -11,5 +11,6 @@ mvn clean package
 HERE you notice it wil take the default values "Sanity_Suite.xml" mentioned in "pom.xml"
 ## Passing parameters to mvn command
 ```
-mvn clean package -DsuiteFile="RegressionSuit.xml"
+mvn clean test -DsuiteFile="Regression_Suite.xml"
+mvn clean test -DsuiteFile="Sanity_Suite.xml"
 ```
