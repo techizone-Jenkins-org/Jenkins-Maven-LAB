@@ -1,4 +1,4 @@
-# Jenkins_Build_withs_mvn_cmd_param
+# Maven Installation
 Build the Artifact by Passing Parameters to maven command
 
 ## Maven Installation
@@ -7,26 +7,26 @@ source
 https://maven.apache.org/install.html
 ```
 ####  Installation of openJDK
+## Amazon Linux
 ```
-yum install java-[VERSION]-openjdk-devel
-sudo alternatives --install /usr/bin/java java usr/lib/jvm/java-[VERSION]-openjdk/bin/java 1000
-sudo alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-[VERSION]-openjdk/bin/javac 1000
-/usr/sbin/alternatives --config java
+sudo dnf update -y
+sudo yum install java-17-amazon-corretto-devel -y
 ``` 
-HERE replace VERSIOn with java-version-number
 
-####  Installation of MAven
+####  Installation of Maven
 ```
-wget https://www-eu.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
-sudo tar xzf apache-maven-3.6.3-bin.tar.gz
-sudo ln -s apache-maven-3.6.3 maven
+sudo wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz
+sudo tar xzf apache-maven-3.9.10-bin.tar.gz -C /opt
+sudo ln -s apache-maven-3.9.10 /opt/maven
 ``` 
 sudo vi /etc/profile.d/maven.sh
 ```
-export M2_HOME="/opt/maven"
-export PATH="${M2_HOME}/bin:${PATH}"
+export M2_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
 ```
 Reload profile
 ```
-source  /etc/profile
+sudo chmod +x /etc/profile.d/maven.sh
+source /etc/profile.d/maven.sh
+mvn -version
 ```

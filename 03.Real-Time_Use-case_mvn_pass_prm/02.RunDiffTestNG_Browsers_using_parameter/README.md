@@ -11,9 +11,9 @@ mvn clean package
 
 ## Passing parameters to mvn command
 ```
-mvn clean package -DsuiteFile="SanitySuit.xml"  -DbrowserProperty="Chrome"
+mvn clean package -DsuiteFile="Sanity_Suite.xml"  -DbrowserProperty="Chrome"
 
-mvn clean package -DsuiteFile="RegressionSuit.xml" -DbrowserProperty="Firefox"
+mvn clean package -DsuiteFile="Regression_Suite.xml" -DbrowserProperty="Firefox"
 
-mvn clean package -DsuiteFile="SanitySuit.xml"  -DbrowserProperty="Edge"
+mvn clean package -DsuiteFile="Sanity_Suite.xml"  -DbrowserProperty="Edge"
 ```
