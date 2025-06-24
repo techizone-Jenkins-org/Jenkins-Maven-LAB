@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SapSecOps Solutions- Home Page</title>
-<link href="images/secops-solution.png" rel="icon">
+<link href="images/secopssolution.png" rel="icon">
 </head>
 </head>
 <body>
@@ -37,7 +37,7 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 		SapSecOps Solutions, 
 		Srikalahsti
 		<br>
-		<a href="mailto:devopstrainingblr@gmail.com">Mail to SapSecOps Solutions</a>
+		<a href="mailto:sapsecopssolutions@gmail.com">Mail to SapSecOps Solutions</a>
 	</span>
 </div>
 <hr>
